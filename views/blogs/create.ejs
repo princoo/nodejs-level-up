@@ -1,0 +1,28 @@
+<html>
+    <%- include('../../partials/header.ejs') %>
+<title>CTREATE BLOG</title>
+<body>
+    <%- include('../../partials/nav.ejs') %>
+
+
+    <h2 style="margin-left: 43%;margin-top: 2%;font-family: Arial, Helvetica, sans-serif;">CREATE BLOG</h2>
+    <div class="blog-content">
+
+    <form action="/newblog" method="post" id="form" enctype="multipart/form-data">
+      <input type="file" name="image"  id="img" >
+      <label for="title" >Blog Title</label>
+        <input type="text" id="title" name="title"  required>
+        <label for="Snippete" name="snippete" >Blog Snippete</label>
+        <input type="text" id="snippete" name="snippete"  required>
+        <label for="body" name="body">Blog Body</label>
+        <textarea id="body" name="body" title ="body"  style="width: 100%;height: 50%;" required></textarea>
+        <input type="submit" value="CREATE">
+
+    </form>
+</div>
+<%- include('../../partials/footer.ejs') %>
+
+
+</body>
+</html> 
+

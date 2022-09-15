@@ -1,0 +1,44 @@
+<html>
+    <%- include('../../partials/header.ejs') %>
+
+<body>
+    <%- include('../../partials/nav.ejs') %>
+
+    <h1><%= data.title%></h1>
+<div class="news">
+     <h2><%= data.snippete%></h2>
+     <p> <%=data.body%></p>
+     <a class="delete" data-doc="<%=data._id%>"><input type="submit" value="DELETE BLOG"></a>
+</div>
+<div class="comment">
+    <form action="/comment/<%=data._id%>" method="post" class="comment-form">
+        <label>name</label>
+        <input type="text" name="personalname">
+        <label>comment</label>
+        <input type="text" name="personalcomment">
+        <input type="submit" value="SEND">
+    </form>
+</div>
+<p><%=data.comments.ObjectId%></p>
+</body>
+
+<script>
+    const trash=document.querySelector('a.delete');
+    trash.addEventListener('click',(e)=>{
+        const endpoint=`/blogs/${trash.dataset.doc}`;
+
+        fetch(endpoint,
+        {method:'DELETE',
+    })
+        .then((result)=>
+            result.json()
+        ).then((output)=>
+        window.location.href=output.redirect
+        )
+        .catch((err)=>{console.log(err);})
+    })
+   
+
+</script>
+
+</html>

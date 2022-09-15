@@ -1,0 +1,66 @@
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type=text], select {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+
+}
+label[for=img] {
+padding: 1%;
+border: 0.1px solid rgb(221, 221, 221);
+float: right;
+background-color: rgb(76, 74, 71);
+border-radius: 5%;
+color: aliceblue;
+}
+label[for=img]:hover{
+background-color: rgb(245, 206, 147);
+color:  rgb(76, 74, 71);
+}
+
+
+input[type=submit] {
+width: 100%;
+background-color: #f8af5b;
+color: white;
+padding: 14px 20px;
+
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: transform .5s; 
+
+}
+input[type=file]{
+width: 100%;
+background-color: #e0c29e;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: transform .5s; 
+float: left;
+padding-left: 34%;
+
+
+}
+
+input[type=submit]:hover {
+transform: scale(1.05);
+}
+.blog-content{
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+margin-left: 30%;
+margin-right: 30%; 
+margin-top:5%;
+
+}
